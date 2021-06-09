@@ -31,6 +31,18 @@
     <link href="fonts/flaticon.css" rel="stylesheet">
     <!-- ========== GOOGLE FONTS ========== -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700%7CRoboto:100,300,400,400i,500,700" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N0WBMMK30"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9N0WBMMK30');
+    </script>
+
+
+    
   </head>
   <body>
     <form name="form1" method="post" action="index.php" id="cdr">
@@ -61,7 +73,7 @@
           <!-- BRAND -->
           <div class="brand">
             <div class="logo">
-              <a href="index.html">
+              <a href="./">
                 <img src="img/Logo.png" id="im1">
                 <style type="text/css">
                   #im1 {position:absolute; left:220px; top:-25px; height:150px; width:}
@@ -306,8 +318,29 @@
             <div class="row">
               
               <div class="col-sm-12">
+                <?php
+                //Validate if submit button is pressed
+                if(isset($_POST['submit'])): // Is onpressed, execute search methods
+                  //Set connection to server 
+                  $conexion     = mysqli_connect("coacalco.gob.mx", "co4ca_mongoscratch", "Keppler77862145", "co4ca_historico") or die("Problemas con la Conexion");
+
+                  //Get search paramas 
+                  $busca        = isset($_POST['busca']) ? $_POST['busca'] : null;                //Search Person
+                  $buscafecha   = isset($_POST['buscafecha']) ? $_POST['buscafecha'] : null;      //Search Date
+                  $buscalugar   = isset($_POST['buscalugar']) ? $_POST['buscalugar'] : null;      //Search Location
+                  $buscaasunto  = isset($_POST['buscaasunto']) ? $_POST['buscaasunto'] : null;    //Search Subject
+                  $buscaresumen = isset($_POST['buscaresumen']) ? $_POST['buscaresumen'] : null;  //Search Res    
+                  
+                  $sql = "SELECT * FROM actas WHERE Personajes_Personas LIKE '%$busca%'";
+                  $sql .= $buscafecha == null ? '' : " AND Acta LIKE '%$buscafecha%'";
+                  $sql .= $buscalugar == null ? '' : " AND Topografico LIKE '%$buscalugar%'";
+                  $sql .= $buscaasunto == null ? '' : " AND Asunto LIKE '%$buscaasunto%'";
+                  $sql .= $buscaresumen == null ? '' : " AND Encabezamiento LIKE '%$buscaresumen%'";
+
+                  
+                  ?>
                 <table class="table table-bordered table-light" width="1000" border="5">
-                  <h4 class="text-center mt-4 mb-4">Resultados de la busqueda</h4>
+                  <h4 class="text-center mt-4 mb-4">Resultados de la busqueda <?= "$busca $buscafecha $buscalugar $buscaasunto $buscaresumen" ?></h4>
                   <tbody>
                     <tr>
                       <th scope="col">No.</th>
@@ -318,60 +351,45 @@
                       <th scope="col">Descargas</th>
                     </tr><?php
 
-                      //Validate if submit button is pressed
-                      if(isset($_POST['submit'])): // Is onpressed, execute search methods
+                          $registros = mysqli_query($conexion, $sql) or die("Problemas en el Select: ".mysqli_error($conexion));
+                          
+                          $count = 0;
+                          while($reg=mysqli_fetch_array($registros)): ?>
+                            <tr>
+                              <td><?=$count + 1?></td>
+                              <td><?=$reg['NumeroActas']?></td>
+                              <td><?=$reg['Descripcion']?></td>
+                              <td><?=$reg['Personajes_Personas']?></td>
+                              <td><?=$reg['Encabezamiento']?></td>
 
-                        //Set connection to server 
-                        $conexion     = mysqli_connect("localhost","root","","actascabildo") or die("Problemas con la Conexion");
-
-                        //Get search paramas 
-                        $busca        = isset($_POST['busca']) ? $_POST['busca'] : null;                //Search Person
-                        $buscafecha   = isset($_POST['buscafecha']) ? $_POST['buscafecha'] : null;      //Search Date
-                        $buscalugar   = isset($_POST['buscalugar']) ? $_POST['buscalugar'] : null;      //Search Location
-                        $buscaasunto  = isset($_POST['buscaasunto']) ? $_POST['buscaasunto'] : null;    //Search Subject
-                        $buscaresumen = isset($_POST['buscaresumen']) ? $_POST['buscaresumen'] : null;  //Search Res
-                        
-                        $registros = mysqli_query($conexion, "select * from ac$buscafecha WHERE Personajes_Personas LIKE '%$busca%'
-                        AND Fecha LIKE '%$buscafecha%' 
-                        AND Topografico LIKE '%$buscalugar%' 
-                        AND Asunto LIKE '%$buscaasunto%'
-                        AND Encabezamiento LIKE '%$buscaresumen%'") or die("Problemas en el Select: ".mysqli_error($conexion));
-                        
-                        $count = 1;
-                        while($reg=mysqli_fetch_array($registros)): ?>
-                          <tr>
-                            <td><?=$count++?></td>
-                            <td><?=$reg['NumeroActas']?></td>
-                            <td><?=$reg['Descripcion']?></td>
-                            <td><?=$reg['Personajes_Personas']?></td>
-                            <td><?=$reg['Encabezamiento']?></td>
-
-                            <?php
-                            $descripcion = $reg['Descripcion'];
-                            $pagina = $reg['Pagina/Foja'];
-                            $numeroactas = $reg['NumeroActas'];
-                            $sujeto = $reg['SujetoProductor'];
-                            $encabezamiento = $reg['Encabezamiento'];
-                            $asunto = $reg['Asunto'];
-                            $fecha = $reg['Fecha'];
-                            $topografico = $reg['Topografico'];
-                            $personajes = $reg['Personajes_Personas'];
-                            $temas = $reg['Temas'];
-                            $paleografia = $reg['Paleografia'];
-                            $observaciones = $reg['Observaciones'];
-                            ?>
-                            <td class="text-center">
-                              <a class="mr-2" href="download.php?type=pdf">PDF <li class="fas fa-file-pdf"></li></a>
-                              <a class="mr-2" onclick='exportToCsv("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>Excel <li class="fas fa-file-excel"></li></a>
-                              <a class="mr-2" href="download.php?type=xml">XML <li class="fas fa-file-code"></li></a>
-                              <a class="mr-2" href="download.php?type=json">JSON <li class="fas fa-file-download"></li></a>
-                            </td>
-                          <tr>
-                        <?php endwhile;
-                        mysqli_close($conexion);
-                      endif; ?>
+                              <?php
+                              $descripcion = $reg['Descripcion'];
+                              $pagina = $reg['Pagina/Foja'];
+                              $numeroactas = $reg['NumeroActas'];
+                              $sujeto = $reg['SujetoProductor'];
+                              $encabezamiento = $reg['Encabezamiento'];
+                              $asunto = $reg['Asunto'];
+                              $fecha = $reg['Fecha'];
+                              $topografico = $reg['Topografico'];
+                              $personajes = $reg['Personajes_Personas'];
+                              $temas = $reg['Temas'];
+                              $paleografia = $reg['Paleografia'];
+                              $observaciones = $reg['Observaciones'];
+                              ?>
+                              <td class="text-center">
+                                <a class="mr-2 mask" onclick='DownloadPDF("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>PDF <li class="fas fa-file-pdf"></li></a>
+                                <a class="mr-2 mask" onclick='DownloadExcel("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>Excel <li class="fas fa-file-excel"></li></a>
+                                <a class="mr-2 mask" href="download.php?type=xml">XML <li class="fas fa-file-code"></li></a>
+                                <a class="mr-2 mask" onclick='DownloadJSON("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>JSON <li class="fas fa-file-download"></li></a>
+                              </td>
+                            <tr>
+                          <?php
+                            $count ++;
+                          endwhile;
+                      mysqli_close($conexion);?>
                   </tbody>
                 </table>
+                <?php endif; ?>
               </div>	
             </div>
           </div>
@@ -560,29 +578,105 @@
 
 
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.4/xlsx.core.min.js"></script>
+    <script src="js/FileSaver.js"></script>
+    <script src="js/jhxlsx.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+
+
     <script>
-    exportToCsv = function(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-
-      var Results = [
-        ["Descripcion", "Pagina/Hoja", "Numero de Acta", "Sujeto/Productor", "Encabezamiento", "Asunto", "Fecha", "Topografico", "Personajes", "Temas", "Paleografia", "Observaciones"],
-        [descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones],
-      ];
 
 
-      var CsvString = "";
-      Results.forEach(function(RowItem, RowIndex) {
-        RowItem.forEach(function(ColItem, ColIndex) {
-          CsvString += ColItem + ',';
+
+    /* Download With EXCEL Format */
+
+      function DownloadExcel(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
+        var tableData = [
+          {
+            "sheetName": "Datos",
+            "data": [
+              [{"text":"Descripcion"},{"text":"Pagina/Hoja"},{"text":"Numero de Acta"},{"text":"Sujeto/Productor"},{"text":"Encabezamiento"},{"text":"Asunto"},{"text":"Fecha"},{"text":"Topografico"},{"text":"Personajes"},{"text":"Temas"},{"text":"Paleografia"},{"text":"Observaciones"}],
+              [{"text": descripcion},{"text": pagina},{"text": numacta},{"text": sujeto},{"text": encabezamiento},{"text": asunto},{"text": fecha},{"text": topografico},{"text": personajes},{"text": temas},{"text": paleografia},{"text": observaciones}],
+            ]
+          }
+        ];
+
+        var options = {
+          fileName: "Datos Abiertos"
+        };
+
+        Jhxlsx.export(tableData, options);
+      }
+
+
+      /* Download JSON */
+      function DownloadJSON(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
+        //Build a JSON array containing Customer records.
+        var customers = new Array({
+          descripcion: descripcion, 
+          pagina: pagina,
+          numero_acta: numacta,
+          sujeto: sujeto,
+          encabezamiento: encabezamiento,
+          asunto: asunto,
+          fecha: fecha,
+          topografico: topografico,
+          personajes: personajes,
+          temas: temas,
+          paleografia: paleografia,
+          observaciones: observaciones
+
         });
-        CsvString += "\r\n";
-      });
-      CsvString = "data:application/vnd.ms-excel," + encodeURIComponent(CsvString);
-    var x = document.createElement("A");
-    x.setAttribute("href", CsvString );
-    x.setAttribute("download","somedata.xls");
-    document.body.appendChild(x);
-    x.click();
-    }
+
+        //Convert JSON Array to string.
+        var json = JSON.stringify(customers);
+ 
+        //Convert JSON string to BLOB.
+        json = [json];
+        var blob1 = new Blob(json, { type: "text/plain;charset=utf-8" });
+ 
+        //Check the Browser.
+        var isIE = false || !!document.documentMode;
+        if (isIE) {
+            window.navigator.msSaveBlob(blob1, "Datos Abiertos.txt");
+        } else {
+            var url = window.URL || window.webkitURL;
+            link = url.createObjectURL(blob1);
+            var a = document.createElement("a");
+            a.download = "Datos Abiertos.json";
+            a.href = link;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+      }
+
+      function DownloadPDF(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones){
+        var doc = new jsPDF();
+
+        var text = 'Descripcion: ' + descripcion + '\n\n\n' + 'Pagina: ' + pagina + '\n\n\n' + 'Numero de acta: ' + numacta + '\n\n\n' + 'Sujeto: ' + sujeto + '\n\n\n' + 'Encabezamiento: ' + encabezamiento + '\n\n\n' + 'Asunto: ' + asunto + '\n\n\n' + 'Fecha: ' + fecha + '\n\n\n' + 'Topografico: ' + topografico + '\n\n\n' + 'Personajes: ' + personajes + '\n\n\n' + 'Temas: ' + temas + '\n\n\n' + 'Paleografia: ' + paleografia + '\n\n\n' + 'Observaciones: ' + observaciones + '\n\n\n';
+
+        /* Descripcion */
+        var splitText = doc.splitTextToSize(text, 250);
+        var pageHeight = doc.internal.pageSize.height;
+        doc.setFontSize(11);
+        var y = 20;
+        for (var i=0; i<splitText.length; i++){
+          if (y > 275){
+              y = 20;
+              doc.addPage();
+          }
+          doc.text(20, y, splitText[i]);
+          y = y + 5;
+        }
+        
+        doc.text('Documento emitido desde https://historico.coacalco.gob.mx', 50, 280);
+
+        doc.save('Test.pdf');
+      }
     </script>
 
   </body>

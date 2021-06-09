@@ -1,46 +1,46 @@
-<!-- 
-<div id="container"></div>
 
+<input type="button" value="Download JSON" onclick="DownloadJSON()" />
+ 
+ 
+<script type="text/javascript">
+    function DownloadJSON(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
+        //Build a JSON array containing Customer records.
+        var customers = new Array({
+          descripcion: descripcion, 
+          pagina: pagina,
+          numero_acta: numacta,
+          sujeto: sujeto,
+          encabezamiento: encabezamiento,
+          asunto: asunto,
+          fecha: fecha,
+          topografico: topografico,
+          personajes: personajes,
+          temas: temas,
+          paleografia: paleografia,
+          observaciones: observaciones
 
-<script>
-
-var obj = {a: 123, b: "4 5 6"};
-var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
-
-var a = document.createElement('a');
-a.href = 'data:' + data;
-a.download = 'data.json';
-a.innerHTML = 'download JSON';
-
-var container = document.getElementById('container');
-container.appendChild(a);
-</script> -->
-
-
-
-<button onclick='exportToCsv("Descripcion", "Pagina/Hoja", "Numero de Acta", "Sujeto/Productor", "Encabezamiento", "Asunto", "Fecha", "Topografico", "Personajes", "Temas", "Paleografia", "Observaciones")'>export to CSV</button>
-
-<script>
-exportToCsv = function(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-
-  var Results = [
-    ["Descripcion", "Pagina/Hoja", "Numero de Acta", "Sujeto/Productor", "Encabezamiento", "Asunto", "Fecha", "Topografico", "Personajes", "Temas", "Paleografia", "Observaciones"],
-    [descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones],
-  ];
-
-
-  var CsvString = "";
-  Results.forEach(function(RowItem, RowIndex) {
-    RowItem.forEach(function(ColItem, ColIndex) {
-      CsvString += ColItem + ',';
-    });
-    CsvString += "\r\n";
-  });
-  CsvString = "data:application/csv," + encodeURIComponent(CsvString);
- var x = document.createElement("A");
- x.setAttribute("href", CsvString );
- x.setAttribute("download","somedata.csv");
- document.body.appendChild(x);
- x.click();
-}
+        });
+ 
+        //Convert JSON Array to string.
+        var json = JSON.stringify(customers);
+ 
+        //Convert JSON string to BLOB.
+        json = [json];
+        var blob1 = new Blob(json, { type: "text/plain;charset=utf-8" });
+ 
+        //Check the Browser.
+        var isIE = false || !!document.documentMode;
+        if (isIE) {
+            window.navigator.msSaveBlob(blob1, "Datos Abiertos.txt");
+        } else {
+            var url = window.URL || window.webkitURL;
+            link = url.createObjectURL(blob1);
+            var a = document.createElement("a");
+            a.download = "Datos Abiertos.json";
+            a.href = link;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    }
 </script>
