@@ -31,18 +31,6 @@
     <link href="fonts/flaticon.css" rel="stylesheet">
     <!-- ========== GOOGLE FONTS ========== -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700%7CRoboto:100,300,400,400i,500,700" rel="stylesheet">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N0WBMMK30"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9N0WBMMK30');
-    </script>
-
-
-    
   </head>
   <body>
     <form name="form1" method="post" action="index.php" id="cdr">
@@ -72,7 +60,7 @@
           <!-- BRAND -->
           <div class="brand">
             <div class="logo">
-              <a href="./">
+              <a href="index.php">
                 <img src="img/Logo.png" id="im1">
                 <style type="text/css">
                   #im1 {position:absolute; left:220px; top:-25px; height:150px; width:}
@@ -157,6 +145,19 @@
                 <!-- MAIN IMAGE -->
                 <img src="img/slider10.jpg" alt="Image" title="slider_bg1-2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
                 <!-- LAYER NR. 1 -->
+                <div
+                  class="tp-caption tp-resizeme"
+                  data-x="center"
+                  data-hoffset=""
+                  data-y="middle"
+                  data-voffset="['-30','-30','-30','-30']"
+                  data-responsive_offset="on"
+                  data-fontsize="['60','50','40','30']"
+                  data-lineheight="['60','50','40','30']"
+                  data-whitespace="nowrap"
+                  data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  style="z-index: 5; color: #fff; font-weight: 900;">Con un marco histórico que abarca
+                </div>
                 <!-- LAYER NR. 2 -->
                 <div
                   class="tp-caption tp-resizeme"
@@ -177,7 +178,8 @@
                   data-basealign="slide"
                   data-responsive="off"
                   data-elementdelay="0.05"
-                  style="z-index: 9; font-weight: 400; color: #fff; font-family: Raleway;">Con un marco histórico que abarca
+                  style="z-index: 9; font-weight: 400; color: #fff; font-family: Raleway;">de 1874 hasta 1999, los libros de Actas de Cabildo representan la memoria de las y los coacalquenses,
+                  <p class="text-center"> en el proceso de urbanización en lo que era un municipio meramente y eminentemente rural.</p>
                 </div>
               </li>
               <!-- SLIDE NR. 3 -->
@@ -225,153 +227,90 @@
             </ul>
           </div>
         </div>
-        <!-- ========== BOOKING FORM ========== -->
-        <div class="horizontal-booking-form booking-form-over-slider">
-          <div class="container">
-            <div class="inner box-shadow-007">
-              <!-- ========== BOOKING NOTIFICATION ========== -->
-              <div id="booking-notification" class="notification"></div>
-              <form id="booking-form">
-                <!-- NAME -->
-                <div class="row">
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Personaje
-                        <a href="#" title="Personaje" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Ingresa Nombre o Apellido del Personaje a Buscar">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="busca" type="text">
-                    </div>
-                  </div>
-                  <!-- EMAIL -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Año
-                        <a href="#" title="Año" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Año de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscafecha" type="text">
-                    </div>
-                  </div>
-                  <!-- ROOM TYPE -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Lugar
-                        <a href="#" title="Lugar" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Lugar historico a buscar">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscalugar" type="text">
-                      </select>
-                    </div>
-                  </div>
-                  <!-- DATE -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Asunto
-                        <a href="#" title="Asunto" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Asunto de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscaasunto" type="text">
-                    </div>
-                  </div>
-                  <!-- GUESTS -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Resumen
-                        <a href="#" title="Resumen" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Resumen de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" input name="buscaasunto" type="text">
-                    </div>
-                  </div>
-                  <!-- BOOKING BUTTON -->
-                  <div class="col-md-2">
-                    <button type="submit" class="btn btn-book" input name="submit" type="text">Buscar Acta</button>
-                    
-                  </div>
+      <!-- ========== ABOUT ========== -->
+      <section class="about black">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title">
+                <h4 class="text-uppercase">¿Que son las Actas de Cabildo?</h4>
+              </div>
+              <div class="info-branding">
+                <p class="text-justify"> Este fondo documental está conformado por más de un centenar de libros, más de la mitad de 
+                    ellos escritos en letras manuscritas con tintas chinas, sepias o de bolígrafo, cuyo soporte 
+                    es papel industrial, con sellos y timbres de época, sirviendo como testimonio cada detalle 
+                    de su manufactura del momento histórico en que fueron producidos; además la otra parte que 
+                    conforma éste fondo, son mecanografías e impresiones que muestran el cambio de tecnologías 
+                    del siglo XX, evidenciando la transformación de nuestro municipio en cada párrafo, acuerdo, 
+                    punto a discutir o votación. Cabe destacarse que este fondo se nutre y cohabita con otros 
+                    dentro del Archivo Histórico Municipal, los cuales abarcan temas de educación, infancia, 
+                    cultura, tierras, padrones, ayuntamiento, presidencia municipal, registro civil, circulares, 
+                    bandos, etc. </p>
+
+                <p class="text-justify"> Ahora bien, es importante recordar que la figura del Ayuntamiento se establece a la llegada de los 
+                    ibéricos a este nuevo orbe en el siglo XVI pues “de entre estas instituciones de gobierno una de las 
+                    que perduró en el tiempo fue la institución municipal, que desde un principio fue llamada a ser el 
+                    bastión de penetración y organización política en el nuevo reino debido al peso de su práctica y larga 
+                    tradición entre los pueblos españoles (…) implantada en la península hispánica durante el florecimiento 
+                    de la ocupación romana.”   
+                </p>
+
+                <p class="text-justify"> Fue en el año de 1519 cuando comienza “la historia institucional del municipio en México (…) año en el que 
+                    Hernán Cortés fundó el ayuntamiento de la Villa Rica de la Vera Cruz para legitimar los actos de Conquista 
+                    que llevaría a cabo en el territorio recién descubierto.”  Por lo que los ayuntamientos nacen en lo que se 
+                    conocerá como Nueva España como “corporación pública y política, adquirieron fuerza de jure, por lo que la 
+                    fundación de pueblos y ciudades en los territorios que se iban descubriendo y conquistando se sujetó a la 
+                    concepción que sobre el derecho municipal tenían los legisladores reales.”  </p>
+
+                <p class="text-justify"> Existieron ayuntamientos indígenas y españoles, según la concepción de las repúblicas emanadas del pensamiento 
+                    clásico de Platón , por lo que se redujeron jurisdicciones indígenas a cabeceras individuales, afrenta y 
+                    sometimiento al antiguo modelo de <em> calpullis </em> en dónde el tlatoani vivía precisamente en la cabecera, 
+                    lugar en dónde gobernaban caciques bajos las órdenes del propio tlatoani, quien solo tenía por encima en autoridad 
+                    al <em>huey-tlatoani.</em> En tanto, que en las ciudades y villas españolas, el ayuntamiento constituyó desde la 
+                    Conquista, el principal órgano de expresión de que dispusieron los colonizadores de América.  Su composición era en 
+                    general como sigue: 2 Alcaldes y 4 o más Regidores. Así por ejemplo “el primer ayuntamiento que tomó posesión en la 
+                    capital novohispana en marzo de 1524 se compuso de un alcalde mayor, dos alcaldes comunes y ocho ediles.” 
+                    En cuanto a sus funciones, “los ayuntamientos también elaboraban su propio cuerpo legislativo, las ordenanzas que, 
+                    por disposición de Carlos V, debían sujetarse, si trataban de poblaciones, a revisión de las audiencias reales, y 
+                    si trataban de los gremios o del mismo ayuntamiento, al dictamen del virrey.” </p>
+
+                <p> El cuerpo burocrático que componía el ayuntamiento, reunido en el cuerpo colegiado llamado cabildo, nombraba a: </p>
+                <dl class="dl-horizontal">
+                    <dt><h3> <strong>	Alcaldes ordinarios </strong></h3> </dt>
+                    <dd> Nombramiento ratificado por el virrey, el gobernador o el corregidor, lo que indudablemente 
+                        invadía el ámbito del propio ayuntamiento. Sus funciones estaban supeditadas a autoridades 
+                        superiores; desempeñaban funciones jurisdiccionales ordinarias de primera instancia; presidían 
+                        el ayuntamiento, turnándose a la mitad del año. Además, presidían junto con los regidores del 
+                        consejo la administración municipal, entre otras atribuciones.   </dd>
+                        <dt> <h3><strong>	Síndicos </strong> </h3> </dt>
+                    <dd> Podían ser reelectos por varios años, las funciones que desempeñaba era la representación de 
+                        la ciudad en demandas legales ante las autoridades superiores, dictar opiniones ante asuntos 
+                        internos y proteger los derechos ciudadanos.    </dd>
+                        <dt> <h3> <strong>	Regidores </strong> </h3></dt>
+                    <dd> En este sentido, existían regidores perpetuos y hereditarios, electivos y honorarios.   </dd>
+                </dl>
+                <p class="text-justify"> Después de vivir periodos álgidos como el de 1624, cuando el ayuntamiento ejerció un poder tal que 
+                    logró la destitución del virrey Gálvez, o los acontecimientos de 1808 con la sublevación, crisis y 
+                    puerta de entrada al movimiento insurgente, y paso natural a la crisis de 1812 con las Cortés de Cádiz 
+                    y sus nuevos ordenamientos hacia la figura del ayuntamiento, llegamos a un 1824 por demás convulso, 
+                    prólogo de lo que sería el mismo siglo XIX. Sin embargo, este año sentó las bases del primer texto 
+                    Constitucional de corte centralista, en una nación que apenas intentaba respirar aires de libertad. 
+                    En este sentido, el ayuntamiento se conformará como la figura que actualmente conocemos. </p>
+                <p class="text-justify">  Así pues, las Actas de Cabildo son los registros de este cuerpo colegiado, en cuyas sesiones se toman las decisiones 
+                    que marcan la vida y el eje del ayuntamiento; en la actualidad sus integrantes tienen voz y voto, como representantes 
+                    del pueblo. En cada página está la vida municipal, aun cuando pareciera que son sesiones breves y sin ninguna relevancia, 
+                    pues se tornan testimonios primarios de un pasado que nos explica el presente.  </p>          
                 </div>
-              </form>
             </div>
+            
           </div>
         </div>
-      </div>
+      </section>
+      
         <!-- SUBFOOTER -->
-        <div class="subfooter">
-          <div class="container-fluid">
-            <div class="row">
-              
-              <div class="col-sm-12">
-                <table class="table table-bordered table-light" width="1000" border="5">
-                  <tbody>
-                    <tr>
-                      <th scope="col">No.</th>
-                      <th scope="col">Acta No.</th>
-                      <th scope="col">Titulo</th>
-                      <th scope="col">Personajes</th>
-                      <th scope="col">Resumen</th>
-                      <th scope="col">Descargas</th>
-                    </tr>
-                      <?php
-                      //Validate if submit button is pressed
-                      if(isset($_POST['submit'])): // Is onpressed, execute search methods
-                        //Set connection to server 
-                        $conexion     = mysqli_connect("coacalco.gob.mx", "co4ca_mongoscratch", "Keppler77862145", "co4ca_historico") or die("Problemas con la Conexion");
+        <?php
 
-                        //Get search paramas 
-                        $busca        = isset($_POST['busca']) ? $_POST['busca'] : null;                //Search Person
-                        $buscafecha   = isset($_POST['buscafecha']) ? $_POST['buscafecha'] : null;      //Search Date
-                        $buscalugar   = isset($_POST['buscalugar']) ? $_POST['buscalugar'] : null;      //Search Location
-                        $buscaasunto  = isset($_POST['buscaasunto']) ? $_POST['buscaasunto'] : null;    //Search Subject
-                        $buscaresumen = isset($_POST['buscaresumen']) ? $_POST['buscaresumen'] : null;  //Search Res    
-                        
-                        $sql = "SELECT * FROM actas WHERE Personajes_Personas LIKE '%$busca%'";
-                        $sql .= $buscafecha == null ? '' : " AND Acta LIKE '%$buscafecha%'";
-                        $sql .= $buscalugar == null ? '' : " AND Topografico LIKE '%$buscalugar%'";
-                        $sql .= $buscaasunto == null ? '' : " AND Asunto LIKE '%$buscaasunto%'";
-                        $sql .= $buscaresumen == null ? '' : " AND Encabezamiento LIKE '%$buscaresumen%'";
-                        $registros = mysqli_query($conexion, $sql) or die("Problemas en el Select: ".mysqli_error($conexion));
-                        $count = 0;
-                          echo "<h4 class='text-center mt-4 mb-4'>Resultados de la busqueda $busca $buscafecha $buscalugar $buscaasunto $buscaresumen</h4>";
-                        
-                          while($reg=mysqli_fetch_array($registros)): ?>
-                            <tr>
-                              <td><?=$count + 1?></td>
-                              <td><?=$reg['NumeroActas']?></td>
-                              <td><?=$reg['Descripcion']?></td>
-                              <td><?=$reg['Personajes_Personas']?></td>
-                              <td><?=$reg['Encabezamiento']?></td>
-
-                              <?php
-                              $descripcion = $reg['Descripcion'];
-                              $pagina = $reg['Pagina/Foja'];
-                              $numeroactas = $reg['NumeroActas'];
-                              $sujeto = $reg['SujetoProductor'];
-                              $encabezamiento = $reg['Encabezamiento'];
-                              $asunto = $reg['Asunto'];
-                              $fecha = $reg['Fecha'];
-                              $topografico = $reg['Topografico'];
-                              $personajes = $reg['Personajes_Personas'];
-                              $temas = $reg['Temas'];
-                              $paleografia = $reg['Paleografia'];
-                              $observaciones = $reg['Observaciones'];
-                              ?>
-                              <td class="text-center">
-                                <a class="mr-2 mask" onclick='DownloadPDF("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>PDF <li class="fas fa-file-pdf"></li></a>
-                                <a class="mr-2 mask" onclick='DownloadExcel("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>Excel <li class="fas fa-file-excel"></li></a>
-                                <a class="mr-2 mask" href="download.php?type=xml">XML <li class="fas fa-file-code"></li></a>
-                                <a class="mr-2 mask" onclick='DownloadJSON("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>JSON <li class="fas fa-file-download"></li></a>
-                              </td>
-                            <tr>
-                          <?php
-                            $count ++;
-                          endwhile;
-                      mysqli_close($conexion);?>
-                    <?php endif; ?>
+                      ?>
                   </tbody>
                 </table>
               </div>	
@@ -494,6 +433,7 @@
               </div>
               <div class="col-md-6">
                 <div class="social-media">
+                  
                 </div>
               </div>
             </div>
@@ -541,105 +481,29 @@
 
 
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.4/xlsx.core.min.js"></script>
-    <script src="js/FileSaver.js"></script>
-    <script src="js/jhxlsx.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
-
-
     <script>
+    exportToCsv = function(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
+
+      var Results = [
+        ["Descripcion", "Pagina/Hoja", "Numero de Acta", "Sujeto/Productor", "Encabezamiento", "Asunto", "Fecha", "Topografico", "Personajes", "Temas", "Paleografia", "Observaciones"],
+        [descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones],
+      ];
 
 
-
-    /* Download With EXCEL Format */
-
-      function DownloadExcel(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-        var tableData = [
-          {
-            "sheetName": "Datos",
-            "data": [
-              [{"text":"Descripcion"},{"text":"Pagina/Hoja"},{"text":"Numero de Acta"},{"text":"Sujeto/Productor"},{"text":"Encabezamiento"},{"text":"Asunto"},{"text":"Fecha"},{"text":"Topografico"},{"text":"Personajes"},{"text":"Temas"},{"text":"Paleografia"},{"text":"Observaciones"}],
-              [{"text": descripcion},{"text": pagina},{"text": numacta},{"text": sujeto},{"text": encabezamiento},{"text": asunto},{"text": fecha},{"text": topografico},{"text": personajes},{"text": temas},{"text": paleografia},{"text": observaciones}],
-            ]
-          }
-        ];
-
-        var options = {
-          fileName: "Datos Abiertos"
-        };
-
-        Jhxlsx.export(tableData, options);
-      }
-
-
-      /* Download JSON */
-      function DownloadJSON(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-        //Build a JSON array containing Customer records.
-        var customers = new Array({
-          descripcion: descripcion, 
-          pagina: pagina,
-          numero_acta: numacta,
-          sujeto: sujeto,
-          encabezamiento: encabezamiento,
-          asunto: asunto,
-          fecha: fecha,
-          topografico: topografico,
-          personajes: personajes,
-          temas: temas,
-          paleografia: paleografia,
-          observaciones: observaciones
-
+      var CsvString = "";
+      Results.forEach(function(RowItem, RowIndex) {
+        RowItem.forEach(function(ColItem, ColIndex) {
+          CsvString += ColItem + ',';
         });
-
-        //Convert JSON Array to string.
-        var json = JSON.stringify(customers);
- 
-        //Convert JSON string to BLOB.
-        json = [json];
-        var blob1 = new Blob(json, { type: "text/plain;charset=utf-8" });
- 
-        //Check the Browser.
-        var isIE = false || !!document.documentMode;
-        if (isIE) {
-            window.navigator.msSaveBlob(blob1, "Datos Abiertos.txt");
-        } else {
-            var url = window.URL || window.webkitURL;
-            link = url.createObjectURL(blob1);
-            var a = document.createElement("a");
-            a.download = "Datos Abiertos.json";
-            a.href = link;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-      }
-
-      function DownloadPDF(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones){
-        var doc = new jsPDF();
-
-        var text = 'Descripcion: ' + descripcion + '\n\n\n' + 'Pagina: ' + pagina + '\n\n\n' + 'Numero de acta: ' + numacta + '\n\n\n' + 'Sujeto: ' + sujeto + '\n\n\n' + 'Encabezamiento: ' + encabezamiento + '\n\n\n' + 'Asunto: ' + asunto + '\n\n\n' + 'Fecha: ' + fecha + '\n\n\n' + 'Topografico: ' + topografico + '\n\n\n' + 'Personajes: ' + personajes + '\n\n\n' + 'Temas: ' + temas + '\n\n\n' + 'Paleografia: ' + paleografia + '\n\n\n' + 'Observaciones: ' + observaciones + '\n\n\n';
-
-        /* Descripcion */
-        var splitText = doc.splitTextToSize(text, 250);
-        var pageHeight = doc.internal.pageSize.height;
-        doc.setFontSize(11);
-        var y = 20;
-        for (var i=0; i<splitText.length; i++){
-          if (y > 275){
-              y = 20;
-              doc.addPage();
-          }
-          doc.text(20, y, splitText[i]);
-          y = y + 5;
-        }
-        
-        doc.text('Documento emitido desde https://historico.coacalco.gob.mx', 50, 280);
-
-        doc.save('Test.pdf');
-      }
+        CsvString += "\r\n";
+      });
+      CsvString = "data:application/vnd.ms-excel," + encodeURIComponent(CsvString);
+    var x = document.createElement("A");
+    x.setAttribute("href", CsvString );
+    x.setAttribute("download","somedata.xls");
+    document.body.appendChild(x);
+    x.click();
+    }
     </script>
 
   </body>

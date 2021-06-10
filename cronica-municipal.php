@@ -31,18 +31,6 @@
     <link href="fonts/flaticon.css" rel="stylesheet">
     <!-- ========== GOOGLE FONTS ========== -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700%7CRoboto:100,300,400,400i,500,700" rel="stylesheet">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N0WBMMK30"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9N0WBMMK30');
-    </script>
-
-
-    
   </head>
   <body>
     <form name="form1" method="post" action="index.php" id="cdr">
@@ -72,7 +60,7 @@
           <!-- BRAND -->
           <div class="brand">
             <div class="logo">
-              <a href="./">
+              <a href="index.php">
                 <img src="img/Logo.png" id="im1">
                 <style type="text/css">
                   #im1 {position:absolute; left:220px; top:-25px; height:150px; width:}
@@ -157,6 +145,19 @@
                 <!-- MAIN IMAGE -->
                 <img src="img/slider10.jpg" alt="Image" title="slider_bg1-2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
                 <!-- LAYER NR. 1 -->
+                <div
+                  class="tp-caption tp-resizeme"
+                  data-x="center"
+                  data-hoffset=""
+                  data-y="middle"
+                  data-voffset="['-30','-30','-30','-30']"
+                  data-responsive_offset="on"
+                  data-fontsize="['60','50','40','30']"
+                  data-lineheight="['60','50','40','30']"
+                  data-whitespace="nowrap"
+                  data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  style="z-index: 5; color: #fff; font-weight: 900;">Con un marco histórico que abarca
+                </div>
                 <!-- LAYER NR. 2 -->
                 <div
                   class="tp-caption tp-resizeme"
@@ -177,7 +178,8 @@
                   data-basealign="slide"
                   data-responsive="off"
                   data-elementdelay="0.05"
-                  style="z-index: 9; font-weight: 400; color: #fff; font-family: Raleway;">Con un marco histórico que abarca
+                  style="z-index: 9; font-weight: 400; color: #fff; font-family: Raleway;">de 1874 hasta 1999, los libros de Actas de Cabildo representan la memoria de las y los coacalquenses,
+                  <p class="text-center"> en el proceso de urbanización en lo que era un municipio meramente y eminentemente rural.</p>
                 </div>
               </li>
               <!-- SLIDE NR. 3 -->
@@ -225,153 +227,117 @@
             </ul>
           </div>
         </div>
-        <!-- ========== BOOKING FORM ========== -->
-        <div class="horizontal-booking-form booking-form-over-slider">
-          <div class="container">
-            <div class="inner box-shadow-007">
-              <!-- ========== BOOKING NOTIFICATION ========== -->
-              <div id="booking-notification" class="notification"></div>
-              <form id="booking-form">
-                <!-- NAME -->
-                <div class="row">
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Personaje
-                        <a href="#" title="Personaje" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Ingresa Nombre o Apellido del Personaje a Buscar">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="busca" type="text">
-                    </div>
-                  </div>
-                  <!-- EMAIL -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Año
-                        <a href="#" title="Año" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Año de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscafecha" type="text">
-                    </div>
-                  </div>
-                  <!-- ROOM TYPE -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Lugar
-                        <a href="#" title="Lugar" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Lugar historico a buscar">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscalugar" type="text">
-                      </select>
-                    </div>
-                  </div>
-                  <!-- DATE -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Asunto
-                        <a href="#" title="Asunto" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Asunto de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscaasunto" type="text">
-                    </div>
-                  </div>
-                  <!-- GUESTS -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Resumen
-                        <a href="#" title="Resumen" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Resumen de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" input name="buscaasunto" type="text">
-                    </div>
-                  </div>
-                  <!-- BOOKING BUTTON -->
-                  <div class="col-md-2">
-                    <button type="submit" class="btn btn-book" input name="submit" type="text">Buscar Acta</button>
-                    
+      <!-- ========== ABOUT ========== -->
+      <section class="about black">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h4 class="text-uppercase">Crónica Municipal.</h4>
+              </div>
+              <div class="info-branding">
+                <p class="text-justify"> El papel que juegan los Cronistas en sus comunidades es fundamental para acercar a la 
+                    población todos aquellos elementos del pasado que le ayuden a entenderse en su actualidad; 
+                    es el encargado de recorrer las largas raíces que conforman el árbol de la Historia, 
+                    escudriñando en archivos, bibliotecas, hemerotecas, centros de documentación, historia oral, 
+                    fotografías y el inmenso universo digital, todos y cada uno de los testimonios que le ayuden 
+                    a armar el enorme rompecabezas de la memoria. ¿Cuál es la finalidad? Que cada ciudadano 
+                    desarrolle un sentido de pertenencia e identidad, entendiendo con ello que es parte del proceso 
+                    histórico que está viviendo y por consiguiente, se convertirá en personaje del pasado en algún momento. 
+                    Además, que comprenda que es heredero de un tiempo pretérito material e inmaterial, que lo explica 
+                    como habitante de una región y momento determinado. </p>
+
+                <p class="text-justify"> Es importante que cada municipio del país tenga su propio Cronista, pues además de convertirse 
+                    en el hacedor de memoria viva, también contribuye a acercar a quien así lo requiera, información 
+                    documental, lo que conlleva a un ejercicio de transparencia y acceso a la información, usando 
+                    herramientas tecnológicas que todo Gobierno Abierto debe desarrollar; este aspecto forma parte de 
+                    los Derechos Humanos fundamentales de los ciudadanos, pues en primer término, el Artículo 6° de la  
+                <strong> Constitución Política de los Estados Unidos Mexicanos</strong> , en su fracción I, refiere que 
+                “toda la información en posesión de cualquier autoridad, entidad, órgano y organismo de los Poderes 
+                Ejecutivo, Legislativo y Judicial, órganos autónomos, partidos políticos, fideicomisos y fondos públicos, 
+                así como de cualquier persona física, moral o sindicato que reciba y ejerza recursos públicos o realice 
+                actos de autoridad en el ámbito federal, estatal y municipal, es pública y sólo podrá ser reservada temporalmente 
+                por razones de interés público y seguridad nacional, en los términos que fijen las leyes.” ; en tanto que la
+                <strong> Ley General de Transparencia y Accesos a la Información Pública </strong> en su Artículo 122, 
+                menciona que “Cualquier persona por sí misma o a través de su representante, podrá presentar solicitud de 
+                accesos a información ante la Unidad de Transparencia, a través de la Plataforma Nacional, en la oficina y 
+                oficinas designadas para ello, vía correo electrónico, correo postal, mensajería, telégrafo, verbalmente o 
+                cualquier medio aprobado por el Sistema Nacional” ; mientras que la <strong> Ley de Transparencia y Acceso a 
+                la Información Pública del Estado de México y Municipios, </strong> también en su Artículo 122, cita que: 
+                “la clasificación es el proceso mediante el cual el sujeto obligado determina que la información en su 
+                poder actualiza alguno de los supuestos de reserva o confidencialidad, de conformidad con lo dispuesto en 
+                el presente título. Los supuestos de reserva o confidencialidad previstos en las leyes deberán ser acordes 
+                on las bases, principios y disposiciones establecidos de la Ley General y, en ningún caso, podrán 
+                contravenirla. Los titulares de las áreas de los sujetos obligados serán los responsables de clasificar la 
+                información, de conformidad con lo dispuestos en la presente Ley y demás disposiciones jurídicas aplicables.”  
+                </p>
+
+                <p class="text-justify"> Esto último en relación a lo establecido en el Artículo 30 de la <strong> Ley Orgánica Municipal del Estado de 
+                    México </strong>, referente a las sesiones del ayuntamiento, que indican: “…todos los acuerdos de las sesiones 
+                    que no contengan información clasificada y el resultado de su votación, serán difundidos cada mes en la 
+                    Gaceta Municipal y en los estrados de la Secretaría del Ayuntamiento, así como los datos de identificación 
+                    de las actas que contengan información clasificada, incluyendo en cada caso, el fundamento legal que clasifica la 
+                    información.” </p>
+
+                <p class="text-justify"> Así mismo, la <strong>Ley General de Archivos </strong> vigente, en su artículo 2°, fracciones III y VIII, en donde menciona 
+                    que el objeto de esta Ley es “promover el uso y difusión de los archivos producidos por los sujetos obligados, 
+                    para favorecer la toma de decisiones, la investigación y el resguardo de la memoria institucional de México” 
+                    y; “Contribuir al ejercicio del derecho a la verdad y a la memoria, de conformidad con las disposiciones aplicables”; 
+                    además del artículo 4°, fracciones III, VIII y XXV, que para los efectos de esta Ley se entenderá por: “Archivo: 
+                    al conjunto organizado de documentos producidos o recibidos por los sujetos obligados en el ejercicio de sus atribuciones 
+                    y funciones, con independencia del soporte, espacio o lugar que se resguarden; “Archivo histórico: Al integrado por 
+                    documentos de conservación permanente y de relevancia para la memoria nacional, regional o local de carácter público y; “ 
+                    Documentos históricos: A los que se preservan permanentemente porque poseen valores evidénciales, testimoniales e informativos 
+                    relevantes para la sociedad, y que por ello forman parte íntegra de la memoria colectiva del país y son fundamentales para el 
+                    conocimiento de la historia nacional, regional o local.”   </p>
+
+                <p class="text-justify"> Por su parte, la <strong>Ley de Archivos y Administración de Documentos del Estado de México y Municipios </strong> en su Artículo 
+                    40 señala que “los responsables de los Archivos Históricos de los Sujetos Obligados, adoptarán medidas para fomentar 
+                    la preservación y difusión de los documentos con valor histórico que forman parte del Patrimonio Documental, las que 
+                    incluirán: I. Formular políticas y estrategias archivísticas que fomenten la preservación y difusión de los Documentos 
+                    Históricos; II. Desarrollar programas de difusión de los Documentos a través de medios digitales, de conformidad con la 
+                    Ley de Gobierno Digital del Estado de México y Municipios y su Reglamento , con el fin favorecer el acceso libre y gratuito 
+                    a los contenidos culturales e informativos de la entidad; III. Elaborar los Instrumentos de Consulta Archivística que permitan 
+                    la localización de los documentos resguardados en los Fondos Documentales y colecciones de los Archivos Históricos….”  </p>
+
+                <p class="text-justify"> Y en cuanto a la figura del Cronista Municipal y su relación con los Archivos Históricos, <strong> El Bando Municipal de Coacalco de Berriozábal del 
+                    año 2021 </strong>, en su Artículo 34, De la Secretaría del Ayuntamiento, fracción X, menciona que dentro de su competencia está el “manejo y control 
+                    del archivo general del Municipio, incluyendo el archivo histórico asegurando las condiciones para su estudio por el cronista municipal.” ; 
+                    mientras que el <strong> Reglamento Orgánico de la Administración Pública Municipal de Coacalco de Berriozábal, Estado de México</strong>, en su artículo 82 
+                    sobre el Titular de Archivo Histórico, fracción V, menciona que: “Coordinar junto con el Cronista Municipal el estudio y difusión de los 
+                    acervos tutelados” y en la Sección Sexta, del Cronista Municipal, Artículo 92, fracción III, donde se menciona que entre sus atribuciones 
+                    tendrá. “promover el rescate, conservación y difusión de los archivos históricos del municipio para el conocimiento de la población, apegado 
+                    a la ley general de archivos vigente y realizando trabajos permanentes de catalogación y organización de los acervos.”  </p>
+
+                <p class="text-justify"> Además de entender como memoria, lo establecido por la UNESCO en 1992 al crear <strong> Memory of the World Programme </strong>, en donde la conservación 
+                    documental es una de las piezas clave para el avance de la humanidad, pues el saqueo, la dispersión, el comercio ilegal, la destrucción, 
+                    los conflictos bélicos o la falta de recursos, ha ocasionado que infinidad de acervos se pierdan y con ello el pasado de la población de 
+                    todo el orbe.   </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="brand-info">
+                <div class="inner">
+                  <div class="content">
+                    <img src="img/img1.jpg" width="250" alt="Image">
+                    <div class="content">
+                    <img src="img/img2.jpg" width="195" alt="Image">
+                    <div class="content">
+                    <img src="img/img3.jpg" width="195" alt="Image">
+                </div>
+                </div>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      
         <!-- SUBFOOTER -->
-        <div class="subfooter">
-          <div class="container-fluid">
-            <div class="row">
-              
-              <div class="col-sm-12">
-                <table class="table table-bordered table-light" width="1000" border="5">
-                  <tbody>
-                    <tr>
-                      <th scope="col">No.</th>
-                      <th scope="col">Acta No.</th>
-                      <th scope="col">Titulo</th>
-                      <th scope="col">Personajes</th>
-                      <th scope="col">Resumen</th>
-                      <th scope="col">Descargas</th>
-                    </tr>
-                      <?php
-                      //Validate if submit button is pressed
-                      if(isset($_POST['submit'])): // Is onpressed, execute search methods
-                        //Set connection to server 
-                        $conexion     = mysqli_connect("coacalco.gob.mx", "co4ca_mongoscratch", "Keppler77862145", "co4ca_historico") or die("Problemas con la Conexion");
+        <?php
 
-                        //Get search paramas 
-                        $busca        = isset($_POST['busca']) ? $_POST['busca'] : null;                //Search Person
-                        $buscafecha   = isset($_POST['buscafecha']) ? $_POST['buscafecha'] : null;      //Search Date
-                        $buscalugar   = isset($_POST['buscalugar']) ? $_POST['buscalugar'] : null;      //Search Location
-                        $buscaasunto  = isset($_POST['buscaasunto']) ? $_POST['buscaasunto'] : null;    //Search Subject
-                        $buscaresumen = isset($_POST['buscaresumen']) ? $_POST['buscaresumen'] : null;  //Search Res    
-                        
-                        $sql = "SELECT * FROM actas WHERE Personajes_Personas LIKE '%$busca%'";
-                        $sql .= $buscafecha == null ? '' : " AND Acta LIKE '%$buscafecha%'";
-                        $sql .= $buscalugar == null ? '' : " AND Topografico LIKE '%$buscalugar%'";
-                        $sql .= $buscaasunto == null ? '' : " AND Asunto LIKE '%$buscaasunto%'";
-                        $sql .= $buscaresumen == null ? '' : " AND Encabezamiento LIKE '%$buscaresumen%'";
-                        $registros = mysqli_query($conexion, $sql) or die("Problemas en el Select: ".mysqli_error($conexion));
-                        $count = 0;
-                          echo "<h4 class='text-center mt-4 mb-4'>Resultados de la busqueda $busca $buscafecha $buscalugar $buscaasunto $buscaresumen</h4>";
-                        
-                          while($reg=mysqli_fetch_array($registros)): ?>
-                            <tr>
-                              <td><?=$count + 1?></td>
-                              <td><?=$reg['NumeroActas']?></td>
-                              <td><?=$reg['Descripcion']?></td>
-                              <td><?=$reg['Personajes_Personas']?></td>
-                              <td><?=$reg['Encabezamiento']?></td>
-
-                              <?php
-                              $descripcion = $reg['Descripcion'];
-                              $pagina = $reg['Pagina/Foja'];
-                              $numeroactas = $reg['NumeroActas'];
-                              $sujeto = $reg['SujetoProductor'];
-                              $encabezamiento = $reg['Encabezamiento'];
-                              $asunto = $reg['Asunto'];
-                              $fecha = $reg['Fecha'];
-                              $topografico = $reg['Topografico'];
-                              $personajes = $reg['Personajes_Personas'];
-                              $temas = $reg['Temas'];
-                              $paleografia = $reg['Paleografia'];
-                              $observaciones = $reg['Observaciones'];
-                              ?>
-                              <td class="text-center">
-                                <a class="mr-2 mask" onclick='DownloadPDF("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>PDF <li class="fas fa-file-pdf"></li></a>
-                                <a class="mr-2 mask" onclick='DownloadExcel("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>Excel <li class="fas fa-file-excel"></li></a>
-                                <a class="mr-2 mask" href="download.php?type=xml">XML <li class="fas fa-file-code"></li></a>
-                                <a class="mr-2 mask" onclick='DownloadJSON("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>JSON <li class="fas fa-file-download"></li></a>
-                              </td>
-                            <tr>
-                          <?php
-                            $count ++;
-                          endwhile;
-                      mysqli_close($conexion);?>
-                    <?php endif; ?>
+                      ?>
                   </tbody>
                 </table>
               </div>	
@@ -385,7 +351,7 @@
 </div>
 
 
-<footer>
+    <footer>
         <div class="footer-widgets">
           <div class="container">
             <div class="row">
@@ -494,6 +460,7 @@
               </div>
               <div class="col-md-6">
                 <div class="social-media">
+                
                 </div>
               </div>
             </div>
@@ -541,105 +508,29 @@
 
 
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.4/xlsx.core.min.js"></script>
-    <script src="js/FileSaver.js"></script>
-    <script src="js/jhxlsx.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
-
-
     <script>
+    exportToCsv = function(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
+
+      var Results = [
+        ["Descripcion", "Pagina/Hoja", "Numero de Acta", "Sujeto/Productor", "Encabezamiento", "Asunto", "Fecha", "Topografico", "Personajes", "Temas", "Paleografia", "Observaciones"],
+        [descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones],
+      ];
 
 
-
-    /* Download With EXCEL Format */
-
-      function DownloadExcel(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-        var tableData = [
-          {
-            "sheetName": "Datos",
-            "data": [
-              [{"text":"Descripcion"},{"text":"Pagina/Hoja"},{"text":"Numero de Acta"},{"text":"Sujeto/Productor"},{"text":"Encabezamiento"},{"text":"Asunto"},{"text":"Fecha"},{"text":"Topografico"},{"text":"Personajes"},{"text":"Temas"},{"text":"Paleografia"},{"text":"Observaciones"}],
-              [{"text": descripcion},{"text": pagina},{"text": numacta},{"text": sujeto},{"text": encabezamiento},{"text": asunto},{"text": fecha},{"text": topografico},{"text": personajes},{"text": temas},{"text": paleografia},{"text": observaciones}],
-            ]
-          }
-        ];
-
-        var options = {
-          fileName: "Datos Abiertos"
-        };
-
-        Jhxlsx.export(tableData, options);
-      }
-
-
-      /* Download JSON */
-      function DownloadJSON(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-        //Build a JSON array containing Customer records.
-        var customers = new Array({
-          descripcion: descripcion, 
-          pagina: pagina,
-          numero_acta: numacta,
-          sujeto: sujeto,
-          encabezamiento: encabezamiento,
-          asunto: asunto,
-          fecha: fecha,
-          topografico: topografico,
-          personajes: personajes,
-          temas: temas,
-          paleografia: paleografia,
-          observaciones: observaciones
-
+      var CsvString = "";
+      Results.forEach(function(RowItem, RowIndex) {
+        RowItem.forEach(function(ColItem, ColIndex) {
+          CsvString += ColItem + ',';
         });
-
-        //Convert JSON Array to string.
-        var json = JSON.stringify(customers);
- 
-        //Convert JSON string to BLOB.
-        json = [json];
-        var blob1 = new Blob(json, { type: "text/plain;charset=utf-8" });
- 
-        //Check the Browser.
-        var isIE = false || !!document.documentMode;
-        if (isIE) {
-            window.navigator.msSaveBlob(blob1, "Datos Abiertos.txt");
-        } else {
-            var url = window.URL || window.webkitURL;
-            link = url.createObjectURL(blob1);
-            var a = document.createElement("a");
-            a.download = "Datos Abiertos.json";
-            a.href = link;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-      }
-
-      function DownloadPDF(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones){
-        var doc = new jsPDF();
-
-        var text = 'Descripcion: ' + descripcion + '\n\n\n' + 'Pagina: ' + pagina + '\n\n\n' + 'Numero de acta: ' + numacta + '\n\n\n' + 'Sujeto: ' + sujeto + '\n\n\n' + 'Encabezamiento: ' + encabezamiento + '\n\n\n' + 'Asunto: ' + asunto + '\n\n\n' + 'Fecha: ' + fecha + '\n\n\n' + 'Topografico: ' + topografico + '\n\n\n' + 'Personajes: ' + personajes + '\n\n\n' + 'Temas: ' + temas + '\n\n\n' + 'Paleografia: ' + paleografia + '\n\n\n' + 'Observaciones: ' + observaciones + '\n\n\n';
-
-        /* Descripcion */
-        var splitText = doc.splitTextToSize(text, 250);
-        var pageHeight = doc.internal.pageSize.height;
-        doc.setFontSize(11);
-        var y = 20;
-        for (var i=0; i<splitText.length; i++){
-          if (y > 275){
-              y = 20;
-              doc.addPage();
-          }
-          doc.text(20, y, splitText[i]);
-          y = y + 5;
-        }
-        
-        doc.text('Documento emitido desde https://historico.coacalco.gob.mx', 50, 280);
-
-        doc.save('Test.pdf');
-      }
+        CsvString += "\r\n";
+      });
+      CsvString = "data:application/vnd.ms-excel," + encodeURIComponent(CsvString);
+    var x = document.createElement("A");
+    x.setAttribute("href", CsvString );
+    x.setAttribute("download","somedata.xls");
+    document.body.appendChild(x);
+    x.click();
+    }
     </script>
 
   </body>

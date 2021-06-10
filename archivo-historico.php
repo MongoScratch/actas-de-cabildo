@@ -31,18 +31,6 @@
     <link href="fonts/flaticon.css" rel="stylesheet">
     <!-- ========== GOOGLE FONTS ========== -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700%7CRoboto:100,300,400,400i,500,700" rel="stylesheet">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N0WBMMK30"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9N0WBMMK30');
-    </script>
-
-
-    
   </head>
   <body>
     <form name="form1" method="post" action="index.php" id="cdr">
@@ -72,7 +60,7 @@
           <!-- BRAND -->
           <div class="brand">
             <div class="logo">
-              <a href="./">
+              <a href="index.php">
                 <img src="img/Logo.png" id="im1">
                 <style type="text/css">
                   #im1 {position:absolute; left:220px; top:-25px; height:150px; width:}
@@ -88,7 +76,7 @@
           </div>
           <!-- MAIN MENU -->
           <nav id="main-menu" class="main-menu">
-            <ul class="menu">
+          <ul class="menu">
               <li class="menu-item dropdown active">
                 <a href="./cronica-municipal.php">Cronica Municipal</a>
               </li>
@@ -157,6 +145,19 @@
                 <!-- MAIN IMAGE -->
                 <img src="img/slider10.jpg" alt="Image" title="slider_bg1-2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
                 <!-- LAYER NR. 1 -->
+                <div
+                  class="tp-caption tp-resizeme"
+                  data-x="center"
+                  data-hoffset=""
+                  data-y="middle"
+                  data-voffset="['-30','-30','-30','-30']"
+                  data-responsive_offset="on"
+                  data-fontsize="['60','50','40','30']"
+                  data-lineheight="['60','50','40','30']"
+                  data-whitespace="nowrap"
+                  data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                  style="z-index: 5; color: #fff; font-weight: 900;">Con un marco histórico que abarca
+                </div>
                 <!-- LAYER NR. 2 -->
                 <div
                   class="tp-caption tp-resizeme"
@@ -177,7 +178,8 @@
                   data-basealign="slide"
                   data-responsive="off"
                   data-elementdelay="0.05"
-                  style="z-index: 9; font-weight: 400; color: #fff; font-family: Raleway;">Con un marco histórico que abarca
+                  style="z-index: 9; font-weight: 400; color: #fff; font-family: Raleway;">de 1874 hasta 1999, los libros de Actas de Cabildo representan la memoria de las y los coacalquenses,
+                  <p class="text-center"> en el proceso de urbanización en lo que era un municipio meramente y eminentemente rural.</p>
                 </div>
               </li>
               <!-- SLIDE NR. 3 -->
@@ -225,153 +227,76 @@
             </ul>
           </div>
         </div>
-        <!-- ========== BOOKING FORM ========== -->
-        <div class="horizontal-booking-form booking-form-over-slider">
-          <div class="container">
-            <div class="inner box-shadow-007">
-              <!-- ========== BOOKING NOTIFICATION ========== -->
-              <div id="booking-notification" class="notification"></div>
-              <form id="booking-form">
-                <!-- NAME -->
-                <div class="row">
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Personaje
-                        <a href="#" title="Personaje" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Ingresa Nombre o Apellido del Personaje a Buscar">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="busca" type="text">
-                    </div>
+      <!-- ========== ABOUT ========== -->
+      <section class="about black">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title">
+                <h2 class="text-uppercase">Archivo Histórico Municipal de Cd. Coacalco</h2>
+                <p class="section-subtitle">“Prof. Jorge Luis Sainz Díaz”</p>
+              </div>
+              <div class="info-branding">
+                <p class="text-justify"> Ciudad Coacalco resguarda en la antigua sede del Palacio Municipal, hoy Casa de Cultura “Calmecac”, 
+                    el Archivo Histórico Municipal, que lleva por nombre “Prof. Jorge Luis Sainz Díaz” , quien fuera un distinguido e incansable 
+                    ciudadano coacalquense, que hizo de este municipio su hogar desde la década de los setenta del siglo pasado, trascendiendo de 
+                    este plano terrenal el 04 de mayo del 2020 a los 73 años, y dejando un legado de formación cultural sólido, enfocado a amplios 
+                    sectores de la población, como jóvenes, amas de casa y obreros, llevando hasta sus colonias, barrios, escuelas o condominios 
+                    temas de literatura, oratoria, tecnología, arte, historia, ciencia y su pasión, la filosofía, sembrando la semilla del conocimiento 
+                    en cada uno de ellos y haciendo del espacio público su ágora del saber y pensamiento libre. Al ser un hombre comprometido con el noble 
+                    acto memorioso, su nombre debía ser plasmado en el recinto más importante de nuestro municipio en cuestión de la salvaguarda y divulgación 
+                    de la memoria, como un homenaje póstumo a su apostolado cultural en Coacalco. </p>
+
+                <p class="text-justify"> Es así que el Archivo Histórico Municipal  “Prof. Jorge Luis Sainz Díaz” , tiene la tarea de poner a la vanguardia tecnológica
+                     los procesos y objetivos archivísticos que todo repositorio de este tipo debe cumplir. En este sentido, los puntos que se atienden conforme al Macro 
+                     Proyecto de Rescate Documental del AHMJLSD llamado “Coatl la memoriosa”, en el rubro de Rescate y Paleografía de los libros de Actas de Cabildo del 
+                     H. Ayuntamiento de Coacalco, 1874 a 1999, se suman a los propuestos en el Certamen a la Innovación en Transparencia, convocado por el máximo órgano 
+                     autónomo en la materia, el Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales, en su edición 2021, coincidiendo 
+                     con la elaboración y ejecución del antes mencionado proyecto de Actas de Cabildo, entrando así en el ámbito municipal y enfocándolo al modelo de Gobierno 
+                     Abierto; estos puntos son:  
+                </p>
+
+                <p class="text-justify"> 
+            <ul> 
+                <li> Archivos y gestión documental; </li>
+                <li> Instrumentos de control y consulta archivística;</li>
+                <li> Preservación y difusión de documentos históricos. </li>
+            </ul>        
+            </p>
+
+                <p class="text-justify"> En este sentido, el proyecto de “Rescate y Paleografía de Actas de Cabildo del H. Ayuntamiento de Coacalco, 1874-1999”, tiene como 
+                    finalidad la creación e implementación de una base de datos digital cuyo motor de búsqueda permitirá al investigador o ciudadano interesado en algún tema 
+                    en específico, a identificar el desarrollo que ha tenido Cd. Coacalco desde la segunda mitad del siglo XIX hasta finales del siglo XX. Con ello se podrá 
+                    tener un mapeo general y documentado de rubros como agricultura, personajes históricos de los pasados Ayuntamientos, ganadería, caminos, escuelas, pavimentación, 
+                    modificación de calles, colonias o barrios, así como de acontecimientos o hechos históricos sobresalientes que acaecieron en nuestro actual municipio, sin olvidar 
+                    el registro de la vida cotidiana de sus habitantes en diferentes años y centurias.   </p>
+
+                
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="brand-info">
+                <div class="inner">
+                  <div class="content">
+                    <img src="img/img1.jpg" width="250" alt="Image">
+                    <div class="content">
+                    <img src="img/img4.jpg" width="195" alt="Image">
+                    <div class="content">
+                    <img src="img/img5.jpg" width="195" alt="Image">
                   </div>
-                  <!-- EMAIL -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Año
-                        <a href="#" title="Año" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Año de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscafecha" type="text">
-                    </div>
-                  </div>
-                  <!-- ROOM TYPE -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Lugar
-                        <a href="#" title="Lugar" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Lugar historico a buscar">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscalugar" type="text">
-                      </select>
-                    </div>
-                  </div>
-                  <!-- DATE -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Asunto
-                        <a href="#" title="Asunto" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Asunto de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" name="buscaasunto" type="text">
-                    </div>
-                  </div>
-                  <!-- GUESTS -->
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>Resumen
-                        <a href="#" title="Resumen" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Resumen de la acta">
-                          <i class="fa fa-info-circle"></i>
-                        </a>
-                      </label>
-                      <input class="form-control" input name="buscaasunto" type="text">
-                    </div>
-                  </div>
-                  <!-- BOOKING BUTTON -->
-                  <div class="col-md-2">
-                    <button type="submit" class="btn btn-book" input name="submit" type="text">Buscar Acta</button>
-                    
-                  </div>
+</div>
+</div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      
         <!-- SUBFOOTER -->
-        <div class="subfooter">
-          <div class="container-fluid">
-            <div class="row">
-              
-              <div class="col-sm-12">
-                <table class="table table-bordered table-light" width="1000" border="5">
-                  <tbody>
-                    <tr>
-                      <th scope="col">No.</th>
-                      <th scope="col">Acta No.</th>
-                      <th scope="col">Titulo</th>
-                      <th scope="col">Personajes</th>
-                      <th scope="col">Resumen</th>
-                      <th scope="col">Descargas</th>
-                    </tr>
-                      <?php
-                      //Validate if submit button is pressed
-                      if(isset($_POST['submit'])): // Is onpressed, execute search methods
-                        //Set connection to server 
-                        $conexion     = mysqli_connect("coacalco.gob.mx", "co4ca_mongoscratch", "Keppler77862145", "co4ca_historico") or die("Problemas con la Conexion");
+        <?php
 
-                        //Get search paramas 
-                        $busca        = isset($_POST['busca']) ? $_POST['busca'] : null;                //Search Person
-                        $buscafecha   = isset($_POST['buscafecha']) ? $_POST['buscafecha'] : null;      //Search Date
-                        $buscalugar   = isset($_POST['buscalugar']) ? $_POST['buscalugar'] : null;      //Search Location
-                        $buscaasunto  = isset($_POST['buscaasunto']) ? $_POST['buscaasunto'] : null;    //Search Subject
-                        $buscaresumen = isset($_POST['buscaresumen']) ? $_POST['buscaresumen'] : null;  //Search Res    
-                        
-                        $sql = "SELECT * FROM actas WHERE Personajes_Personas LIKE '%$busca%'";
-                        $sql .= $buscafecha == null ? '' : " AND Acta LIKE '%$buscafecha%'";
-                        $sql .= $buscalugar == null ? '' : " AND Topografico LIKE '%$buscalugar%'";
-                        $sql .= $buscaasunto == null ? '' : " AND Asunto LIKE '%$buscaasunto%'";
-                        $sql .= $buscaresumen == null ? '' : " AND Encabezamiento LIKE '%$buscaresumen%'";
-                        $registros = mysqli_query($conexion, $sql) or die("Problemas en el Select: ".mysqli_error($conexion));
-                        $count = 0;
-                          echo "<h4 class='text-center mt-4 mb-4'>Resultados de la busqueda $busca $buscafecha $buscalugar $buscaasunto $buscaresumen</h4>";
-                        
-                          while($reg=mysqli_fetch_array($registros)): ?>
-                            <tr>
-                              <td><?=$count + 1?></td>
-                              <td><?=$reg['NumeroActas']?></td>
-                              <td><?=$reg['Descripcion']?></td>
-                              <td><?=$reg['Personajes_Personas']?></td>
-                              <td><?=$reg['Encabezamiento']?></td>
-
-                              <?php
-                              $descripcion = $reg['Descripcion'];
-                              $pagina = $reg['Pagina/Foja'];
-                              $numeroactas = $reg['NumeroActas'];
-                              $sujeto = $reg['SujetoProductor'];
-                              $encabezamiento = $reg['Encabezamiento'];
-                              $asunto = $reg['Asunto'];
-                              $fecha = $reg['Fecha'];
-                              $topografico = $reg['Topografico'];
-                              $personajes = $reg['Personajes_Personas'];
-                              $temas = $reg['Temas'];
-                              $paleografia = $reg['Paleografia'];
-                              $observaciones = $reg['Observaciones'];
-                              ?>
-                              <td class="text-center">
-                                <a class="mr-2 mask" onclick='DownloadPDF("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>PDF <li class="fas fa-file-pdf"></li></a>
-                                <a class="mr-2 mask" onclick='DownloadExcel("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>Excel <li class="fas fa-file-excel"></li></a>
-                                <a class="mr-2 mask" href="download.php?type=xml">XML <li class="fas fa-file-code"></li></a>
-                                <a class="mr-2 mask" onclick='DownloadJSON("<?=$descripcion?>", "<?=$pagina?>", "<?=$numeroactas?>", "<?=$sujeto?>", "<?=$encabezamiento?>", "<?=$asunto?>", "<?=$fecha?>", "<?=$topografico?>", "<?=$personajes?>", "<?=$temas?>", "<?=$paleografia?>", "<?=$observaciones?>")'>JSON <li class="fas fa-file-download"></li></a>
-                              </td>
-                            <tr>
-                          <?php
-                            $count ++;
-                          endwhile;
-                      mysqli_close($conexion);?>
-                    <?php endif; ?>
+                      ?>
                   </tbody>
                 </table>
               </div>	
@@ -494,6 +419,7 @@
               </div>
               <div class="col-md-6">
                 <div class="social-media">
+                 
                 </div>
               </div>
             </div>
@@ -541,105 +467,29 @@
 
 
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.4/xlsx.core.min.js"></script>
-    <script src="js/FileSaver.js"></script>
-    <script src="js/jhxlsx.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
-
-
     <script>
+    exportToCsv = function(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
+
+      var Results = [
+        ["Descripcion", "Pagina/Hoja", "Numero de Acta", "Sujeto/Productor", "Encabezamiento", "Asunto", "Fecha", "Topografico", "Personajes", "Temas", "Paleografia", "Observaciones"],
+        [descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones],
+      ];
 
 
-
-    /* Download With EXCEL Format */
-
-      function DownloadExcel(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-        var tableData = [
-          {
-            "sheetName": "Datos",
-            "data": [
-              [{"text":"Descripcion"},{"text":"Pagina/Hoja"},{"text":"Numero de Acta"},{"text":"Sujeto/Productor"},{"text":"Encabezamiento"},{"text":"Asunto"},{"text":"Fecha"},{"text":"Topografico"},{"text":"Personajes"},{"text":"Temas"},{"text":"Paleografia"},{"text":"Observaciones"}],
-              [{"text": descripcion},{"text": pagina},{"text": numacta},{"text": sujeto},{"text": encabezamiento},{"text": asunto},{"text": fecha},{"text": topografico},{"text": personajes},{"text": temas},{"text": paleografia},{"text": observaciones}],
-            ]
-          }
-        ];
-
-        var options = {
-          fileName: "Datos Abiertos"
-        };
-
-        Jhxlsx.export(tableData, options);
-      }
-
-
-      /* Download JSON */
-      function DownloadJSON(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones) {
-        //Build a JSON array containing Customer records.
-        var customers = new Array({
-          descripcion: descripcion, 
-          pagina: pagina,
-          numero_acta: numacta,
-          sujeto: sujeto,
-          encabezamiento: encabezamiento,
-          asunto: asunto,
-          fecha: fecha,
-          topografico: topografico,
-          personajes: personajes,
-          temas: temas,
-          paleografia: paleografia,
-          observaciones: observaciones
-
+      var CsvString = "";
+      Results.forEach(function(RowItem, RowIndex) {
+        RowItem.forEach(function(ColItem, ColIndex) {
+          CsvString += ColItem + ',';
         });
-
-        //Convert JSON Array to string.
-        var json = JSON.stringify(customers);
- 
-        //Convert JSON string to BLOB.
-        json = [json];
-        var blob1 = new Blob(json, { type: "text/plain;charset=utf-8" });
- 
-        //Check the Browser.
-        var isIE = false || !!document.documentMode;
-        if (isIE) {
-            window.navigator.msSaveBlob(blob1, "Datos Abiertos.txt");
-        } else {
-            var url = window.URL || window.webkitURL;
-            link = url.createObjectURL(blob1);
-            var a = document.createElement("a");
-            a.download = "Datos Abiertos.json";
-            a.href = link;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-      }
-
-      function DownloadPDF(descripcion, pagina, numacta, sujeto, encabezamiento, asunto, fecha, topografico, personajes, temas, paleografia, observaciones){
-        var doc = new jsPDF();
-
-        var text = 'Descripcion: ' + descripcion + '\n\n\n' + 'Pagina: ' + pagina + '\n\n\n' + 'Numero de acta: ' + numacta + '\n\n\n' + 'Sujeto: ' + sujeto + '\n\n\n' + 'Encabezamiento: ' + encabezamiento + '\n\n\n' + 'Asunto: ' + asunto + '\n\n\n' + 'Fecha: ' + fecha + '\n\n\n' + 'Topografico: ' + topografico + '\n\n\n' + 'Personajes: ' + personajes + '\n\n\n' + 'Temas: ' + temas + '\n\n\n' + 'Paleografia: ' + paleografia + '\n\n\n' + 'Observaciones: ' + observaciones + '\n\n\n';
-
-        /* Descripcion */
-        var splitText = doc.splitTextToSize(text, 250);
-        var pageHeight = doc.internal.pageSize.height;
-        doc.setFontSize(11);
-        var y = 20;
-        for (var i=0; i<splitText.length; i++){
-          if (y > 275){
-              y = 20;
-              doc.addPage();
-          }
-          doc.text(20, y, splitText[i]);
-          y = y + 5;
-        }
-        
-        doc.text('Documento emitido desde https://historico.coacalco.gob.mx', 50, 280);
-
-        doc.save('Test.pdf');
-      }
+        CsvString += "\r\n";
+      });
+      CsvString = "data:application/vnd.ms-excel," + encodeURIComponent(CsvString);
+    var x = document.createElement("A");
+    x.setAttribute("href", CsvString );
+    x.setAttribute("download","somedata.xls");
+    document.body.appendChild(x);
+    x.click();
+    }
     </script>
 
   </body>
